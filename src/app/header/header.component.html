@@ -34,7 +34,8 @@
 
 
         <h3 (click)="plus($event)" [innerHTML]="pageSubtitle"
-          [ngClass]="{blue: num%2==1, red: num%2==0}"></h3>
+          [class.blue]="num%2==1"
+          [class.red]="num%2==0"></h3>
 
         +{{num}}
 

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  pageTitle = "The Will Will Web!";
+
   constructor() { }
 
   ngOnInit() {

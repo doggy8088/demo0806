@@ -5,12 +5,16 @@ import { IArticle } from './shared/article';
 export class SearchService {
 
   data: IArticle[];
-
+  
+  keyword: string = '';
+  
   constructor() {
     this.data = this.defaults;
   }
 
   doSearch(keyword: string) {
+    this.keyword = keyword;
+    console.log(keyword)
     this.data = this.defaults.filter( (value: IArticle) => {
       return value.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
     });

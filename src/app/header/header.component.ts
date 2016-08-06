@@ -11,10 +11,19 @@ export class HeaderComponent implements OnInit {
   pageTitleLink = 'http://blog.miniasp.com/';
 
   pageSubtitle = '記載著 <strong>Will</strong> 在網路世界的學習心得與技術分享';
-  
+
+  num = 1;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  plus(event: MouseEvent) {
+    console.log(event);
+    if(event.ctrlKey) {
+      this.num++;
+    }
   }
 
 }

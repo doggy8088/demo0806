@@ -29,7 +29,8 @@
         [title]="pageTitle">
       <hgroup class="pull-left">
         <h1><a [href]="pageTitleLink">{{pageTitle}}</a></h1>
-        <h3 [innerHTML]="pageSubtitle" class="blue"></h3>
+        <h3 (click)="plus($event)" [innerHTML]="pageSubtitle" class="blue"></h3>
+        +{{num}}
       </hgroup>
       <div id="social-icons" class="pull-right social-icon">
         <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">

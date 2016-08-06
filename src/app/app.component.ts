@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './header';
 import { ArticleComponent } from './article';
 import { SearchComponent } from './search';
-
+import { IArticle } from './shared/article';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -14,7 +14,19 @@ export class AppComponent {
 
   subtitle = '記載著 <strong>Will</strong> 在網路世界的學習心得與技術分享';
 
-  data = [
+  data: IArticle[];
+
+  constructor() {
+    this.data = this.defaults;
+  }
+
+  doSearch(keyword: string) {
+    this.data = this.defaults.filter( (value: IArticle) => {
+      return value.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
+    });
+  }
+
+  defaults: IArticle[] = [
     {
       "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
       "title": "從命令提示字元中開啟 Visual Studio Code 如何避免顯示惱人的偵錯訊息",

@@ -9,4 +9,12 @@ import { HeaderComponent } from './header';
 })
 export class AppComponent {
   title = 'app works!';
+  keyword: string;
+
+  doSearch(event: KeyboardEvent) {
+    var input = event.target as HTMLInputElement;
+    if(event.keyCode == 13) {
+      this.keyword = input.value;
+    }
+  }
 }

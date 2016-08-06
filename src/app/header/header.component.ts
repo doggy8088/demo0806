@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  pageTitle = "The Will Will Web!";
-
+  pageTitle = 'The Will Will Web!';
+  pageTitleLink = 'http://blog.miniasp.com/';
   constructor() { }
 
   ngOnInit() {

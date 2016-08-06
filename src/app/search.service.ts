@@ -5,9 +5,11 @@ import { IArticle } from './shared/article';
 export class SearchService {
 
   data: IArticle[];
-  
+
+  hot: string[] = ['Visual Studio Code', 'IT', '20', '偵錯'];
+
   keyword: string = '';
-  
+
   constructor() {
     this.data = this.defaults;
   }

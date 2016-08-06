@@ -8,7 +8,8 @@
       placeholder="請輸入搜尋關鍵字"
       #keywordInput
       (keyup)="doSearch($event, keywordInput)"
-      ><input type="button" value="搜尋" id="searchbutton">
+      ><input type="button" value="搜尋" id="searchbutton"
+       (click)="doSearch($event, keywordInput)">
 {{keyword}}
       </div>
   </div>

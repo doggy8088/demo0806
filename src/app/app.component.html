@@ -20,8 +20,12 @@
     <aside class="col-md-4 sidebar-wrapper">
       <div id="widgetzone_be_WIDGET_ZONE" class="widgetzone">
 
-        <app-search></app-search>
-        
+        <app-search
+          (search)="searcyKeyword=$event"></app-search>
+
+        {{searcyKeyword}}
+
+
         <!-- Calendar START -->
         <div class="widget calendar" id="widgete02e41df-35d8-4572-a862-0dd0fb2fa504">
           <h4 class="widget-header">
